@@ -4,23 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Simple Contact Form</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+  <!-- <script>
+    $(document).ready(function(){
+      $(".btn").click(function(){
+        $(".input, .text-area").val("");
+      });
+    })
+  </script> -->
+  <script src="script.js"></script>
+  <title>Transparent Contact Us</title>
 </head>
 <body>
-  <div class="container">
-    <p>contact us</p>
-    <div class="login">
-      <input type="text" class="input" placeholder="Name">
-      <input type="email" class="input" placeholder="Email">
+  <div class="wrapper">
+    <div class="contact-us">
+      <div class="error-message"></div>
+      <div class="title">Transparent contact us form</div>
+      <form id="myForm" onsubmit="return validation()">
+      <div class="input-fields">
+        <div class="items">
+          <label for="name" class="label">name</label>
+          <input type="text" id="name" class="input">
+        </div>
+        <div class="items">
+          <label for="email" class="label">email</label>
+          <input type="text" id="email" class="input">
+        </div>
+        <div class="items">
+          <label for="subject" class="label">subject</label>
+          <input type="text" id="subject" class="input">
+        </div>
+        <div class="items">
+          <label for="msg" class="label">message</label>
+          <textarea id="msg" class="text-area"></textarea>
+        </div>
+      </div>
+      <button class="btn">send</button>
+      <!-- <div class="btn">
+        <label for="submit" class="label">send</label>
+        <button type="submit" id="submit">
+      </div> -->
+    </form>
     </div>
-    <div class="subject">
-      <input type="text" class="input" placeholder="Subject">
-    </div>
-    <div class="msg">
-      <textarea class="area" placeholder="Message"></textarea>
-    </div>
-    <div class="btn">send</div>
   </div>
 </body>
 </html>
